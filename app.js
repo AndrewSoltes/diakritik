@@ -49,7 +49,7 @@ var trie = JSON.parse(fs.readFileSync('wordlist.json', 'utf8'));
 var app = express.createServer();
 
 app.configure(function (){
-    app.use(express.static(__dirname + '/public'));
+    app.use(express['static'](__dirname + '/public'));
     app.use(express.bodyParser());
 });
 
@@ -212,107 +212,4 @@ function accentWord(word) {
 			}
 		}
 	}
-}
-
-
-function prepend_to_every(prefix, result) {
-	for (var i in result) {
-		result[i].word = prefix + result[i].word;
-	}
-	return result;
-}
-
-
-function capitalize_every(result) {
-	for (i in result)
-		result[i]['word'] = result[i]['word'].charAt(0).toUpperCase() + result[i].word.substr(1);
-}
-
-function check(word) {
-	if (typeof word !== 'string' || word == '')
-		return '';
-	var toupper = (word.charAt(0) === word.charAt(0).toUpperCase()) ? true : false;
-	word = word.toLowerCase();
-	var results = [];
-	for (var i in prefixes) {
-		var prefix = prefixes[i];
-		if (word.indexOf(prefix) === 0) {
-			var minus_prefix = word.substring(prefix.length);
-			var minus_prefix_result = prepend_to_every(prefix, check(minus_prefix));
-			results = results.concat(minus_prefix_result);
-		}
-	}
-	word = word.split('');
-	findwords(0, word, trie, '', results);
-	if (toupper)
-		capitalize_every(results);
-	return results;
-}
-
-function remove_duplicates(results) {
-	var len = results.length;
-	for (var i = 0; i < len; i++) {
-		if (i in results && (i+1) in results && results[i].word === results[i+1].word) {
-			results.splice(i, 1);
-			i--;
-		}
-	}
-	return results;
-}
-
-function get_accented_words(word) {
-	var results = check(word);
-	if (results.length === 0)
-		return [];
-	else {
-		var just_list = [];
-		results.sort(function (a, b) {
-			return a['$'] - b['$'];
-		});
-		results = remove_duplicates(results);
-		for (var i in results) {
-			just_list.push(results[i].word);
-		}
-		return just_list;
-	}
-}
-
-function findwords(i, word, wordlist, goodword, result) {
-	if (!word[i] || !plainToAcc[word[i]]) {
-		if ('$' in wordlist) {
-			result.push({ 'word': goodword, '$': wordlist['$'] });
-			//console.log(wordlist);
-		}
-		return;
-	}
-	var word_alts = plainToAcc[word[i]];
-	for (var j in word_alts) {
-		if (word_alts[j] in wordlist)
-			findwords(i+1, word, wordlist[word_alts[j]], goodword+word_alts[j], result);
-	}
-}
-
-function accent_line(text) {
-	var reg = /^[a-zA-Z]$/;
-	var buff = '';
-	var out = [];
-	var len = text.length;
-	for (var i = 0; i < len; i++) {
-		if (reg.test(text[i])) {
-			buff += text[i];
-
-		} else {
-			if (buff !== '') {	//output accented word in buff
-				var accented_words = get_accented_words(buff);
-				if (accented_words.length === 0)
-					out.push(buff);
-				else
-					out.push(accented_words);
-				buff = '';
-			}
-
-			out.push(text[i]);
-		}
-	}
-	return out;
 }
