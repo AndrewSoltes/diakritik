@@ -119,7 +119,9 @@ function set_dropdown_handlers () {
   //   return false;
   // });
   $(".dropdown-inline .dropdown-menu a").click(function () {
-    change_word_under_cursor($(this).html());
+		var word = $(this).html();
+		$.get('/use/' + word);
+    change_word_under_cursor(word);
   });
 }
 

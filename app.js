@@ -37,8 +37,6 @@ var plainToAcc = {
 	, 'z': ['z', 'ž']
 };
 
-//var accToPlain = getAccToPlain();
-
 var prefixes = ['naj', 'ne'];
 
 var accLetter = /[áäčďéíľĺňóôŕšťúýž]/;
@@ -54,8 +52,8 @@ app.configure(function (){
 });
 
 app.get('/use/:word', function (req, res) {
-
-	res.send(JSON.stringify(words))
+	incrementUsage(req.params.word);
+	res.end('ok');
 });
 
 app.post('/accent-line', function (req, res) {
@@ -66,21 +64,6 @@ if (require.main === module) {
 	app.listen(process.env.VMC_APP_PORT || 3000);
 	console.log('running...');
 }
-
-// console.log(words['b']['e']['z']['p']['l']['a']['t']['n']['ý']['c']['h']);
-// var test = "Mam tony textu, vsetko bez makcenov, dlznov a podobneho svinstva, neviete, ci existuje nejaka zalezitost, ktora by mi to tam pomohla pridat?";
-// console.log(check_text(test));
-// console.log(check('artroza'));
-
-//function getAccToPlain() {
-//	var atp = {};
-//	for (var elem in plainToAcc) {
-//		for (var i = 1; i < plainToAcc[elem].length; i++) {
-//			atp[plainToAcc[elem][i]] = elem;
-//		}
-//	}
-//	return atp;
-//}
 
 // output like ['some_text', ['accword', 'aččword'], 'another text' ]
 // accented words sorted by usage desc
@@ -211,5 +194,19 @@ function accentWord(word) {
 				}
 			}
 		}
+	}
+}
+
+function incrementUsage(word) {
+	word = word.toLowerCase();
+	console.log(util.inspect(word, true, null));
+	var marker = trie;
+	for (var i = 0; i < word.length; i++) {
+		if (word.charAt(i) in marker) {
+			marker = marker[word.charAt(i)];
+		}
+	}
+	if (typeof marker.$ === 'number') {
+		marker.$++;
 	}
 }
