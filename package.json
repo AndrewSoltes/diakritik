@@ -1,0 +1,21 @@
+{
+  "author": "Andrew Soltes",
+  "name": "diakritik",
+  "description": "Zdiakritizuj text.",
+  "version": "0.0.0",
+  "repository": {
+    "url": ""
+  },
+  "main": "app.js",
+  "scripts": {
+    "test": "test/app_test.js"
+  },
+  "engines": {
+    "node": "~0.6.8"
+  },
+  "dependencies": {
+	  "express": ""
+  },
+  "devDependencies": {},
+  "optionalDependencies": {}
+}
