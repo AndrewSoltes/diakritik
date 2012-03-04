@@ -130,8 +130,8 @@ function mongoConnect(cb) {
 
 	cdb.open(function(err, connecteddb) {
 		if (mongo.username !== '') {
-			db.authenticate(mongo.username, mongo.password, function(err2, result) {
-				cb(err2, result);
+			connecteddb.authenticate(mongo.username, mongo.password, function(err2, result) {
+				cb(err2, connecteddb);
 			});
 
 		} else {
