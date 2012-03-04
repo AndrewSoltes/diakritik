@@ -7,6 +7,7 @@ make usage statistics work and be transparent to client
 var fs = require('fs');
 var express = require('express');
 var util = require('util');
+var mongodb = require('mongodb');
 
 var plainToAcc = {
 	  'a': ['a', 'á', 'ä']
@@ -42,7 +43,11 @@ var prefixes = ['naj', 'ne'];
 var accLetter = /[áäčďéíľĺňóôŕšťúýž]/;
 var unAccLetter = /[a-zA-Z]/;
 
-var trie = JSON.parse(fs.readFileSync('wordlist.json', 'utf8'));
+var trie = null;
+
+var PORT = process.env.VMC_APP_PORT || 3000;
+var DICT_FILE = 'dict.json';
+var UPDATE_INTERVAL = 1000 * 60 * 30;
 
 var app = express.createServer();
 
@@ -60,9 +65,79 @@ app.post('/accent-line', function (req, res) {
 	res.send(JSON.stringify(parse(req.body.q)));
 });
 
-if (require.main === module) {
-	app.listen(process.env.VMC_APP_PORT || 3000);
-	console.log('running...');
+mongoConnect(function(err, db) {
+	if (err) {
+		runFromFile();
+
+	} else {
+		db.collection('dictionary', function(err, coll) {
+			if (err) {
+				runFromFile();
+
+			} else {
+				console.log('Saving dict to db every ' + UPDATE_INTERVAL / 1000 + "s");
+
+				setInterval(function() {
+					for (var letter in trie) {
+						if (trie.hasOwnProperty(letter)) {
+							coll.update(
+								{'letter': letter},
+								{'letter': letter, part: trie[letter]},
+								{upsert:true});
+						}
+					}
+				}, UPDATE_INTERVAL);
+
+				coll.find({}).toArray(function(err, parts) {
+					if (parts.length > 0) {
+						trie = {};
+						for (var i = 0; i < parts.length; i++) {
+							trie[parts[i].letter] = parts[i].part;
+						}
+
+						app.listen(PORT);
+						console.log('running with dict from database');
+
+					} else {
+						runFromFile();
+					}
+				});
+			}
+		});
+	}
+});
+
+function runFromFile() {
+	trie = JSON.parse(fs.readFileSync(DICT_FILE, 'utf8'));
+	app.listen(PORT);
+	console.log('running with dict from file');
+}
+
+function mongoConnect(cb) {
+	var mongo = {
+		"hostname":"localhost",
+		"port":27017,
+		"username":"",
+		"password":"",
+		"name":"",
+		"db":"diakritik"
+	};
+	if (process.env.VCAP_SERVICES) {
+		var env = JSON.parse(process.env.VCAP_SERVICES);
+		mongo = env['mongodb-1.8'][0]['credentials'];
+	}
+	var cdb = new mongodb.Db(mongo.db,	new mongodb.Server(mongo.hostname, mongo.port));
+
+	cdb.open(function(err, connecteddb) {
+		if (mongo.username !== '') {
+			db.authenticate(mongo.username, mongo.password, function(err2, result) {
+				cb(err2, result);
+			});
+
+		} else {
+			cb(err, connecteddb);
+		}
+	});
 }
 
 // output like ['some_text', ['accword', 'aččword'], 'another text' ]
@@ -160,6 +235,7 @@ function accentWord(word) {
 
 	return accentedWords;
 
+	// beware, this fn mangle its arguments
 	function walk(curr, unacc, acc) {
 		if (unacc.length === 0) {
 			//at the end of walk
@@ -199,13 +275,14 @@ function accentWord(word) {
 
 function incrementUsage(word) {
 	word = word.toLowerCase();
-	console.log(util.inspect(word, true, null));
 	var marker = trie;
+
 	for (var i = 0; i < word.length; i++) {
 		if (word.charAt(i) in marker) {
 			marker = marker[word.charAt(i)];
 		}
 	}
+
 	if (typeof marker.$ === 'number') {
 		marker.$++;
 	}
