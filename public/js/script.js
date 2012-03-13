@@ -1,6 +1,5 @@
 
 $(document).ready(function () {
-  set_dropdown_handlers();
   var h = $(window).height();
   $('.row').not('#text-area').each(function () {
     h -= $(this).height() + 70;
@@ -9,12 +8,18 @@ $(document).ready(function () {
   $('#editor').css('height', h);
 
   $('#dia').click(function (e) {
+		$('#select').removeClass('disabled')
     zdiakritizuj();
   });
 
 	$('#copy').on('click', function(e) {
 		e.preventDefault();
 		myCodeMirror.setValue(getText());
+	});
+
+	$('#select').on('click', function(e) {
+		e.preventDefault();
+		selectText();
 	});
 
   var options = {
@@ -85,4 +90,21 @@ function getText() {
 		}
 	});
 	return text.join('');
+}
+
+function selectText() {
+    var doc = document;
+    var text = doc.getElementById("result");
+
+    if (doc.body.createTextRange) { // ms
+        var range = doc.body.createTextRange();
+        range.moveToElementText(text);
+        range.select();
+    } else if (window.getSelection) { // moz, opera, webkit
+        var selection = window.getSelection();
+        var range = doc.createRange();
+        range.selectNodeContents(text);
+        selection.removeAllRanges();
+        selection.addRange(range);
+    }
 }
