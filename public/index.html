@@ -38,10 +38,15 @@
 	<!--<script src="js/mylibs/less-1.1.3.min.js"></script>-->
 <style>
 	a, a:visited, h1 small {
-		color: #915b9e;
+		color: #82528f;
 	}
 
-	h1 {font-family: 'Lobster';}
+	.notfound {
+		/*text-decoration: underline;*/
+		border-bottom: #e6303f dashed thin;
+	}
+
+	h1 {font-family: 'Lobster' "Helvetica Neue";}
 
 	a:hover {
 		color: #492d4f;
@@ -74,7 +79,7 @@
 </head>
 
 <body>
-
+<a href="http://github.com/AndrewSoltes/diakritik"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
 <div class="container">
 
 	<div class="row-fluid">
@@ -92,7 +97,7 @@
 	<div class="row-fluid" id="text-area">
 		<div class="span12">
 			<div class="well">
-				<textarea id="editor">Vloz alebo napis text a stlac tlacidlo Zdiakritizuj! Na oznacene slova sa da kliknut a vybrat spravne doplnenie.</textarea>
+				<textarea id="editor">Vloz alebo napis text a stlac tlacidlo Zdiakritizuj. Na oznacene slova sa da kliknut a vybrat spravne doplnenie.</textarea>
 			</div>
 		</div>
 	</div>
@@ -130,12 +135,15 @@
 
 
 	<footer>
-		<hr/>
+<!--
+<hr/>
 		made with
 		<a href="http://html5boilerplate.com/">HTML Boilerplate</a>,
 		<a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
 		<a href="http://codemirror.net/">CodeMirror</a>,
 		<a href="http://nodejs.org/">Node.js</a>
+-->
+
 	</footer>
 </div>
 <!--  end of container class -->

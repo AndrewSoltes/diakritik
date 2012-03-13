@@ -204,7 +204,7 @@ function pushAccentedWords(out, word) {
 	var acw = accentWord(word);
 	if (acw.length === 0) {
 		//the word don't exist TODO spellcheck!
-		out.push(word);
+		out.push({notfound: word});
 
 	} else if (acw.length === 1) {
 		//just one way to accent this word, no need to push array

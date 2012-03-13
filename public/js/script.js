@@ -52,8 +52,7 @@ function insertResult(msg) {
 			html.push('<span>');
 			html.push(field);
 			html.push('</span>');
-		}
-		else {
+		} else if (field instanceof Array) {
 			html.push('<span class="dropdown"><a id="word');
 			html.push(i);
 			html.push('" class="dropdown-toggle" data-toggle="dropdown">');
@@ -62,11 +61,15 @@ function insertResult(msg) {
 			var fl = field.length;
 			for (var j = 0; j < fl; j++) {
 				html.push(
-					'<li><a onclick="replace('+ i +', \''+ field[j] +'\');">');
+					'<li><a onclick="replace(' + i + ', \'' + field[j] + '\');">');
 				html.push(field[j]);
 				html.push('</a></li>')
 			}
 			html.push('</ul></span>');
+		} else if (typeof field.notfound === 'string') {
+			html.push('<span class="notfound">');
+			html.push(field.notfound);
+			html.push('</span>');
 		}
 	}
 	$("#result").html(html.join(''));

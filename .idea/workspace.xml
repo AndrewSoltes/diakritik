@@ -2,90 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30f3e2ce-4982-4b1e-a34e-7ff48707d398" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/compress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/css/baboon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/css/baboon_vector.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/css/docs.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/activeline.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/changemode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/complete.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/complete.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/fullscreen.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/marker.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/mustache.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/preview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/resize.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/runmode.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/demo/theme.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/internals.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/lib/codemirror.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/lib/codemirror.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/lib/overlay.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/lib/runmode.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/manual.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/clike/clike.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/clike/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/coffeescript/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/coffeescript/coffeescript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/coffeescript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/css/css.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/css/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/diff/diff.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/diff/diff.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/diff/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/haskell/haskell.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/haskell/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/htmlmixed/htmlmixed.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/htmlmixed/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/javascript/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/javascript/javascript.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/lua/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/lua/lua.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/php/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/php/php.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/plsql/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/plsql/plsql.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/python/LICENSE.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/python/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/python/python.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/r/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/r/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/r/r.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/rst/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/rst/rst.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/rst/rst.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/ruby/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/ruby/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/ruby/ruby.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/scheme/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/scheme/scheme.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/smalltalk/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/smalltalk/smalltalk.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/sparql/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/sparql/sparql.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/stex/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/stex/stex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/velocity/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/velocity/velocity.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/xml/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/xml/xml.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/xmlpure/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/xmlpure/xmlpure.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/yaml/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/mode/yaml/yaml.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/oldrelease.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/test/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/test/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/theme/default.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/theme/elegant.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/theme/neat.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/codemirror/theme/night.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/index.html" afterPath="$PROJECT_DIR$/public/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/script.js" afterPath="$PROJECT_DIR$/public/js/script.js" />
     </list>
@@ -109,19 +27,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="58" selection-start="2651" selection-end="2651" vertical-scroll-proportion="-54.285713">
+            <state line="82" column="11" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.58790433">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="script.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="184" column="0" selection-start="5549" selection-end="5638" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="script.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/script.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="32" selection-start="272" selection-end="272" vertical-scroll-proportion="0.2571042">
+            <state line="68" column="48" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -130,7 +57,7 @@
       <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="28" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+            <state line="206" column="28" selection-start="4458" selection-end="4458" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -162,9 +89,10 @@
         <option value="$PROJECT_DIR$/test/app_test.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/bin/create_dict.js" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/public/index.html" />
         <option value="$PROJECT_DIR$/public/js/script.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -224,104 +152,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="codemirror" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="diakritik" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -388,7 +218,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="41" y="26" width="1399" height="874" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32904884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -445,7 +275,7 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementacia" />
+    <option name="LAST_COMMIT_MESSAGE" value="visual" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -463,6 +293,7 @@
     <MESSAGE value="persisting dict into mongo db" />
     <MESSAGE value="cf db bug&#10;" />
     <MESSAGE value="implementacia" />
+    <MESSAGE value="visual" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -481,11 +312,6 @@
     <entry file="file://$PROJECT_DIR$/public/less.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-6.2" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bin/create_dict.js">
@@ -533,23 +359,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="14" selection-start="502" selection-end="502" vertical-scroll-proportion="0.0">
+        <state line="206" column="28" selection-start="4458" selection-end="4458" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/public/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="58" selection-start="2651" selection-end="2651" vertical-scroll-proportion="-54.285713">
+        <state line="68" column="48" selection-start="1751" selection-end="1751" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/script.js">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="32" selection-start="272" selection-end="272" vertical-scroll-proportion="0.2571042">
+        <state line="184" column="0" selection-start="5549" selection-end="5638" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="11" selection-start="2898" selection-end="2898" vertical-scroll-proportion="0.58790433">
           <folding />
         </state>
       </provider>
