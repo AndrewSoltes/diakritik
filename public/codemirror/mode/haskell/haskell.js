@@ -218,7 +218,7 @@ CodeMirror.defineMode("haskell", function(cmCfg, modeCfg) {
       "sinh", "snd", "span", "splitAt", "sqrt", "subtract", "succ", "sum",
       "tail", "take", "takeWhile", "tan", "tanh", "toEnum", "toInteger",
       "toRational", "truncate", "uncurry", "undefined", "unlines", "until",
-      "unwords", "unzip", "unzip3", "userError", "trie", "writeFile", "zip",
+      "unwords", "unzip", "unzip3", "userError", "words", "writeFile", "zip",
       "zip3", "zipWith", "zipWith3");
       
     return wkw;

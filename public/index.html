@@ -1,108 +1,140 @@
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
-<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!--[if lt IE 7 ]>
+<html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>
+<html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>
+<html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
 
-  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-       Remove this if you use the .htaccess -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+				 Remove this if you use the .htaccess -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+	<title></title>
+	<meta name="description" content="">
+	<meta name="author" content="">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-  <link rel="shortcut icon" href="/favicon.ico">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+	<!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+	<link rel="shortcut icon" href="/favicon.ico">
+	<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-  <script src="codemirror/lib/codemirror.js"></script>
-  <link rel="stylesheet" href="codemirror/lib/codemirror.css">
-  <!-- <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script> -->
-  <link rel="stylesheet" href="codemirror/theme/default.css">
-  <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=2">
-   <link rel="stylesheet" href="css/bootstrap.css">
-  <!--<link rel="stylesheet/less" href="less/bootstrap.less">-->
-  <!--<script src="js/mylibs/less-1.1.3.min.js"></script>-->
+	<script src="codemirror/lib/codemirror.js"></script>
+	<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+	<!-- <script src="codemirror/mode/htmlmixed/htmlmixed.js"></script> -->
+	<link rel="stylesheet" href="codemirror/theme/monokai.css">
+	<!-- CSS: implied media="all" -->
+	<link rel="stylesheet" href="css/style.css?v=2">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="bootstrap/css/bootstrap-responsive.css">
+	<!--<link rel="stylesheet/less" href="less/bootstrap.less">-->
+	<!--<script src="js/mylibs/less-1.1.3.min.js"></script>-->
 
-  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+	<!-- Uncomment if you are specifically targeting less enabled mobile browsers
+		<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
-  <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-  <script src="js/libs/modernizr-1.7.min.js"></script>
+	<!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+	<script src="js/libs/modernizr-1.7.min.js"></script>
 
 </head>
 
 <body>
 
-<span class=" dropdown-inline" id="popup"><a href="#" class="dropdown-toggle"></a><ul class="dropdown-menu"></ul></span>
 <div class="container">
 
-<div class="row">
-&nbsp;
+	<div class="row-fluid">
+		&nbsp;
+	</div>
+
+	<div class="row-fluid">
+		<div class="span12">
+			<h1>Diakritik
+				<small>online nástroj na dopĺňanie diakritiky</small>
+			</h1>
+			<hr/>
+		</div>
+	</div>
+
+	<div class="row-fluid" id="text-area">
+		<div class="span12">
+			<div class="well">
+				<textarea id="editor">Vloz alebo napis text a stlac tlacidlo Zdiakritizuj! Na oznacene slova sa da kliknut a vybrat spravne doplnenie.</textarea>
+			</div>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+		<div class="span4">
+			&nbsp;
+		</div>
+		<div class="span2">
+			<div class="btn" id="dia"><i class="icon-chevron-down"></i>
+				Zdiaktritizuj!</div>
+		</div>
+		<div class="span2">
+			<div class="btn" id="copy"><i class="icon-chevron-up"></i>
+				Skopíruj naspäť</div>
+		</div>
+	</div>
+
+	<div class="row-fluid">
+		&nbsp;
+	</div>
+
+	<div class="row-fluid">
+		<div class="span12">
+			<!--<div class="well">-->
+			  <pre id="result">
+				  
+			  </pre>
+			<!--</div>-->
+		</div>
+	</div>
+
+	<footer>
+		made with
+		<a href="http://html5boilerplate.com/">HTML Boilerplate</a>,
+		<a href="http://twitter.github.com/bootstrap/">Bootstrap</a>,
+		<a href="http://codemirror.net/">CodeMirror</a>,
+		<a href="http://nodejs.org/">Node.js</a>
+	</footer>
 </div>
-
-<div class="row">
-<div class="span16 columns">
-  <h1>Diakritik <small>online nástroj na dopĺňanie diakritiky</small></h1>
-  <hr />
-</div>
-</div>
-
-<div class="row" id="text-area">
-<div class="span16 columns">
-  <div class="well">
-  <textarea id="editor">
-Vloz alebo napis text a stlac tlacidlo Zdiakritizuj!
-Na oznacene slova sa da kliknut a vybrat spravne doplnenie.</textarea>
-  </div>
-</div>
-</div>
-
-<div class="row">
-  <div class="span2 offset7 columns">
-    <div class="btn" id="dia">Zdiaktritizuj!</div>
-  </div>
-</div>
-
-<footer>
-  andrej šoltés..made with <a href="http://html5boilerplate.com/">HTML Boilerplate</a>, <a href="http://twitter.github.com/bootstrap/">Bootstrap</a>, <a href="http://codemirror.net/">CodeMirror</a>, <a href="http://nodejs.org/">Node.js</a>
-</footer>
-</div> <!--  end of container class -->
+<!--  end of container class -->
 
 
-  <!-- JavaScript at the bottom for fast page loading -->
+<!-- JavaScript at the bottom for fast page loading -->
 
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write("<script src='js/libs/jquery.min.js'>\x3C/script>")</script>
-
-
-  <!-- scripts concatenated and minified via ant build script-->
-  <script src="js/plugins.js"></script>
-  <script src="js/script.js"></script>
-  <!-- end scripts-->
+<!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='js/libs/jquery.min.js'>\x3C/script>")</script>
 
 
-  <!--[if lt IE 7 ]>
-    <script src="js/libs/dd_belatedpng.js"></script>
-    <script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
-  <![endif]-->
+<!-- scripts concatenated and minified via ant build script-->
+<script src="js/plugins.js"></script>
+<script src="bootstrap/js/bootstrap.js"></script>
+<script src="js/script.js"></script>
+<!-- end scripts-->
 
 
-  <!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
-  <!--<script>-->
-    <!--var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];-->
-    <!--(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;-->
-    <!--g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";-->
-    <!--s.parentNode.insertBefore(g,s)}(document,"script"));-->
-  <!--</script>-->
+<!--[if lt IE 7 ]>
+<script src="js/libs/dd_belatedpng.js"></script>
+<script>DD_belatedPNG.fix("img, .png_bg"); // Fix any <img> or .png_bg bg-images. Also, please read goo.gl/mZiyb </script>
+<![endif]-->
+
+
+<!-- mathiasbynens.be/notes/async-analytics-snippet Change UA-XXXXX-X to be your site's ID -->
+<!--<script>-->
+<!--var _gaq=[["_setAccount","UA-XXXXX-X"],["_trackPageview"]];-->
+<!--(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;-->
+<!--g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";-->
+<!--s.parentNode.insertBefore(g,s)}(document,"script"));-->
+<!--</script>-->
 
 </body>
 </html>
